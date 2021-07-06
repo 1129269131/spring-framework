@@ -51,9 +51,8 @@ org/springframework/scheduling/annotation/Scheduled.java
  org.springframework.scheduling.annotation.Scheduled
 org/springframework/jmx/export/notification/package-info.java
  org.springframework.jmx.export.notification.package-info
-org/springframework/context/annotation/EnableLoadTimeWeaving.java
- org.springframework.context.annotation.EnableLoadTimeWeaving
- org.springframework.context.annotation.EnableLoadTimeWeaving$AspectJWeaving
+org/springframework/jmx/export/assembler/MBeanInfoAssembler.java
+ org.springframework.jmx.export.assembler.MBeanInfoAssembler
 org/springframework/context/support/ClassPathXmlApplicationContext.java
  org.springframework.context.support.ClassPathXmlApplicationContext
 org/springframework/context/annotation/ConflictingBeanDefinitionException.java
@@ -183,8 +182,8 @@ org/springframework/scheduling/annotation/AsyncConfigurationSelector.java
  org.springframework.scheduling.annotation.AsyncConfigurationSelector$1
 org/springframework/jmx/export/metadata/ManagedAttribute.java
  org.springframework.jmx.export.metadata.ManagedAttribute
-org/springframework/scheduling/annotation/EnableScheduling.java
- org.springframework.scheduling.annotation.EnableScheduling
+org/springframework/context/support/GenericXmlApplicationContext.java
+ org.springframework.context.support.GenericXmlApplicationContext
 org/springframework/cache/annotation/CacheAnnotationParser.java
  org.springframework.cache.annotation.CacheAnnotationParser
 org/springframework/jmx/support/ObjectNameManager.java
@@ -522,8 +521,8 @@ org/springframework/context/index/CandidateComponentsIndexLoader.java
  org.springframework.context.index.CandidateComponentsIndexLoader
 org/springframework/scheduling/concurrent/ScheduledExecutorFactoryBean.java
  org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean
-org/springframework/context/annotation/EnableMBeanExport.java
- org.springframework.context.annotation.EnableMBeanExport
+org/springframework/cache/interceptor/CacheEvaluationContext.java
+ org.springframework.cache.interceptor.CacheEvaluationContext
 org/springframework/stereotype/Component.java
  org.springframework.stereotype.Component
 org/springframework/cache/interceptor/CacheOperationSource.java
@@ -595,8 +594,8 @@ org/springframework/ui/context/support/UiApplicationContextUtils.java
  org.springframework.ui.context.support.UiApplicationContextUtils
 org/springframework/validation/AbstractErrors.java
  org.springframework.validation.AbstractErrors
-org/springframework/scheduling/annotation/EnableAsync.java
- org.springframework.scheduling.annotation.EnableAsync
+org/springframework/jmx/export/assembler/AbstractMBeanInfoAssembler.java
+ org.springframework.jmx.export.assembler.AbstractMBeanInfoAssembler
 org/springframework/cache/interceptor/KeyGenerator.java
  org.springframework.cache.interceptor.KeyGenerator
 org/springframework/format/datetime/joda/YearMonthFormatter.java
@@ -630,8 +629,8 @@ org/springframework/context/support/ReloadableResourceBundleMessageSource.java
  org.springframework.context.support.ReloadableResourceBundleMessageSource$PropertiesHolder
 org/springframework/format/Formatter.java
  org.springframework.format.Formatter
-org/springframework/context/annotation/Import.java
- org.springframework.context.annotation.Import
+org/springframework/context/annotation/ScannedGenericBeanDefinition.java
+ org.springframework.context.annotation.ScannedGenericBeanDefinition
 org/springframework/cache/interceptor/SimpleCacheErrorHandler.java
  org.springframework.cache.interceptor.SimpleCacheErrorHandler
 org/springframework/context/annotation/ComponentScans.java
@@ -702,8 +701,8 @@ org/springframework/scheduling/support/QuartzCronField.java
  org.springframework.scheduling.support.QuartzCronField
 org/springframework/jndi/TypeMismatchNamingException.java
  org.springframework.jndi.TypeMismatchNamingException
-org/springframework/context/annotation/ConfigurationClassUtils.java
- org.springframework.context.annotation.ConfigurationClassUtils
+org/springframework/context/event/EventListener.java
+ org.springframework.context.event.EventListener
 org/springframework/scheduling/config/TaskExecutorFactoryBean.java
  org.springframework.scheduling.config.TaskExecutorFactoryBean
 org/springframework/scripting/bsh/BshScriptFactory.java
@@ -1147,17 +1146,8 @@ org/springframework/scheduling/config/FixedRateTask.java
  org.springframework.scheduling.config.FixedRateTask
 org/springframework/cache/interceptor/CacheOperationInvocationContext.java
  org.springframework.cache.interceptor.CacheOperationInvocationContext
-org/springframework/context/annotation/ConfigurationClassParser.java
- org.springframework.context.annotation.ConfigurationClassParser
- org.springframework.context.annotation.ConfigurationClassParser$1
- org.springframework.context.annotation.ConfigurationClassParser$CircularImportProblem
- org.springframework.context.annotation.ConfigurationClassParser$DefaultDeferredImportSelectorGroup
- org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping
- org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler
- org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler
- org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHolder
- org.springframework.context.annotation.ConfigurationClassParser$ImportStack
- org.springframework.context.annotation.ConfigurationClassParser$SourceClass
+org/springframework/jmx/export/naming/KeyNamingStrategy.java
+ org.springframework.jmx.export.naming.KeyNamingStrategy
 org/springframework/context/annotation/BeanAnnotationHelper.java
  org.springframework.context.annotation.BeanAnnotationHelper
 org/springframework/format/datetime/joda/LocalDateTimeParser.java
@@ -1362,8 +1352,8 @@ org/springframework/context/expression/BeanFactoryAccessor.java
  org.springframework.context.expression.BeanFactoryAccessor
 org/springframework/validation/DataBinder.java
  org.springframework.validation.DataBinder
-org/springframework/cache/annotation/EnableCaching.java
- org.springframework.cache.annotation.EnableCaching
+org/springframework/context/event/ContextStartedEvent.java
+ org.springframework.context.event.ContextStartedEvent
 org/springframework/cache/interceptor/BeanFactoryCacheOperationSourceAdvisor.java
  org.springframework.cache.interceptor.BeanFactoryCacheOperationSourceAdvisor
  org.springframework.cache.interceptor.BeanFactoryCacheOperationSourceAdvisor$1
@@ -1391,8 +1381,8 @@ org/springframework/remoting/support/RemoteInvocationResult.java
  org.springframework.remoting.support.RemoteInvocationResult
 org/springframework/context/event/EventPublicationInterceptor.java
  org.springframework.context.event.EventPublicationInterceptor
-org/springframework/context/annotation/EnableAspectJAutoProxy.java
- org.springframework.context.annotation.EnableAspectJAutoProxy
+org/springframework/context/i18n/SimpleLocaleContext.java
+ org.springframework.context.i18n.SimpleLocaleContext
 org/springframework/context/event/DefaultEventListenerFactory.java
  org.springframework.context.event.DefaultEventListenerFactory
 org/springframework/ejb/config/package-info.java
@@ -1442,21 +1432,31 @@ org/springframework/remoting/RemoteLookupFailureException.java
  org.springframework.remoting.RemoteLookupFailureException
 org/springframework/jmx/JmxException.java
  org.springframework.jmx.JmxException
-org/springframework/context/event/ContextStartedEvent.java
- org.springframework.context.event.ContextStartedEvent
-org/springframework/jmx/export/assembler/MBeanInfoAssembler.java
- org.springframework.jmx.export.assembler.MBeanInfoAssembler
-org/springframework/cache/interceptor/CacheEvaluationContext.java
- org.springframework.cache.interceptor.CacheEvaluationContext
-org/springframework/context/i18n/SimpleLocaleContext.java
- org.springframework.context.i18n.SimpleLocaleContext
-org/springframework/context/event/EventListener.java
- org.springframework.context.event.EventListener
-org/springframework/context/annotation/ScannedGenericBeanDefinition.java
- org.springframework.context.annotation.ScannedGenericBeanDefinition
-org/springframework/jmx/export/naming/KeyNamingStrategy.java
- org.springframework.jmx.export.naming.KeyNamingStrategy
-org/springframework/jmx/export/assembler/AbstractMBeanInfoAssembler.java
- org.springframework.jmx.export.assembler.AbstractMBeanInfoAssembler
-org/springframework/context/support/GenericXmlApplicationContext.java
- org.springframework.context.support.GenericXmlApplicationContext
+org/springframework/scheduling/annotation/EnableScheduling.java
+ org.springframework.scheduling.annotation.EnableScheduling
+org/springframework/scheduling/annotation/EnableAsync.java
+ org.springframework.scheduling.annotation.EnableAsync
+org/springframework/context/annotation/ConfigurationClassParser.java
+ org.springframework.context.annotation.ConfigurationClassParser
+ org.springframework.context.annotation.ConfigurationClassParser$1
+ org.springframework.context.annotation.ConfigurationClassParser$CircularImportProblem
+ org.springframework.context.annotation.ConfigurationClassParser$DefaultDeferredImportSelectorGroup
+ org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping
+ org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler
+ org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler
+ org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHolder
+ org.springframework.context.annotation.ConfigurationClassParser$ImportStack
+ org.springframework.context.annotation.ConfigurationClassParser$SourceClass
+org/springframework/context/annotation/Import.java
+ org.springframework.context.annotation.Import
+org/springframework/context/annotation/ConfigurationClassUtils.java
+ org.springframework.context.annotation.ConfigurationClassUtils
+org/springframework/context/annotation/EnableAspectJAutoProxy.java
+ org.springframework.context.annotation.EnableAspectJAutoProxy
+org/springframework/context/annotation/EnableMBeanExport.java
+ org.springframework.context.annotation.EnableMBeanExport
+org/springframework/context/annotation/EnableLoadTimeWeaving.java
+ org.springframework.context.annotation.EnableLoadTimeWeaving
+ org.springframework.context.annotation.EnableLoadTimeWeaving$AspectJWeaving
+org/springframework/cache/annotation/EnableCaching.java
+ org.springframework.cache.annotation.EnableCaching

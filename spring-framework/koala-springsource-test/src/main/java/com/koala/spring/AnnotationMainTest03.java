@@ -1,7 +1,5 @@
 package com.koala.spring;
 
-import com.koala.spring.bean.Person01;
-import com.koala.spring.config.MainConfig02;
 import com.koala.spring.config.MainConfig03;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

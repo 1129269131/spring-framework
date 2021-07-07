@@ -136,7 +136,7 @@ public interface AutowireCapableBeanFactory extends BeanFactory {
 	 * @return the new bean instance
 	 * @throws BeansException if instantiation or wiring failed
 	 */
-	//创建 Bean。
+	//day06：创建 Bean。
 	<T> T createBean(Class<T> beanClass) throws BeansException;
 
 	/**
@@ -149,7 +149,7 @@ public interface AutowireCapableBeanFactory extends BeanFactory {
 	 * @param existingBean the existing bean instance
 	 * @throws BeansException if wiring failed
 	 */
-	//自动装配
+	//day06：自动装配
 	void autowireBean(Object existingBean) throws BeansException;
 
 	/**

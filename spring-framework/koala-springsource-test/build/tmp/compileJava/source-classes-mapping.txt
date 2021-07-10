@@ -1,31 +1,43 @@
 com/koala/spring/bean/Person01.java
  com.koala.spring.bean.Person01
-com/koala/spring/MainTest01.java
- com.koala.spring.MainTest01
-com/koala/spring/AnnotationMainTest01.java
- com.koala.spring.AnnotationMainTest01
+com/koala/spring/bean/Cat02.java
+ com.koala.spring.bean.Cat02
+com/koala/spring/bean/Person02.java
+ com.koala.spring.bean.Person02
 com/koala/spring/bean/Cat01.java
  com.koala.spring.bean.Cat01
 com/koala/spring/config/MainConfig02.java
  com.koala.spring.config.MainConfig02
-com/koala/spring/AnnotationMainTest02.java
- com.koala.spring.AnnotationMainTest02
-com/koala/spring/config/MainConfig01.java
- com.koala.spring.config.MainConfig01
-com/koala/spring/config/MainConfig04.java
- com.koala.spring.config.MainConfig04
-com/koala/spring/AnnotationMainTest03.java
- com.koala.spring.AnnotationMainTest03
-com/koala/spring/bean/Cat02.java
- com.koala.spring.bean.Cat02
 com/koala/spring/config/MainConfig03.java
  com.koala.spring.config.MainConfig03
  com.koala.spring.config.MainConfig03$MyImportRegistrar
+com/koala/spring/config/MainConfig01.java
+ com.koala.spring.config.MainConfig01
+com/koala/spring/bean/Person05.java
+ com.koala.spring.bean.Person05
+com/koala/spring/AnnotationMainTest01.java
+ com.koala.spring.AnnotationMainTest01
+com/koala/spring/AnnotationMainTest03.java
+ com.koala.spring.AnnotationMainTest03
 com/koala/spring/bean/Person03.java
  com.koala.spring.bean.Person03
+com/koala/spring/MainTest02.java
+ com.koala.spring.MainTest02
+com/koala/spring/bean/Cat03.java
+ com.koala.spring.bean.Cat03
+com/koala/spring/bean/Person04.java
+ com.koala.spring.bean.Person04
+com/koala/spring/AnnotationMainTest02.java
+ com.koala.spring.AnnotationMainTest02
+com/koala/spring/MainTest01.java
+ com.koala.spring.MainTest01
+com/koala/spring/AnnotationMainTest07.java
+ com.koala.spring.AnnotationMainTest07
+com/koala/spring/config/MainConfig04.java
+ com.koala.spring.config.MainConfig04
 com/koala/spring/AnnotationMainTest04.java
  com.koala.spring.AnnotationMainTest04
 com/koala/spring/AnnotationMainTest05.java
  com.koala.spring.AnnotationMainTest05
-com/koala/spring/bean/Person02.java
- com.koala.spring.bean.Person02
+com/koala/spring/AnnotationMainTest06.java
+ com.koala.spring.AnnotationMainTest06

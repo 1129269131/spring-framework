@@ -551,7 +551,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 			prepareRefresh();
 
 			// Tell the subclass to refresh the internal bean factory.
-			// 工厂创建：BeanFactory第一次开始创建的时候,有xml解析逻辑。
+			// day07：工厂创建：BeanFactory第一次开始创建的时候,有xml解析逻辑。
 			ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();
 
 			//给容器中注册了环境信息作为单实例Bean方便后续自动装配；放了一些后置处理器处理（监听、xxAware功能） Prepare the bean factory for use in this context.
@@ -582,7 +582,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 				registerListeners();
 
 				// Instantiate all remaining (non-lazy-init) singletons.
-				//【大核心】bean创建；完成 BeanFactory 初始化。（工厂里面所有的组件都好了）
+				//day09:【大核心】bean创建；完成 BeanFactory 初始化。（工厂里面所有的组件都好了）
 				finishBeanFactoryInitialization(beanFactory);
 
 				//发布事件 Last step: publish corresponding event.
@@ -671,7 +671,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	 * @see #getBeanFactory()
 	 */
 	protected ConfigurableListableBeanFactory obtainFreshBeanFactory() {
-		refreshBeanFactory(); //刷新整个BeanFactory,注解模式下就是准备工厂，设置工厂id；xml模式下会解析xml
+		refreshBeanFactory(); //day07：刷新整个BeanFactory,注解模式下就是准备工厂，设置工厂id；xml模式下会解析xml
 		return getBeanFactory();
 	}
 
@@ -918,7 +918,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 		beanFactory.freezeConfiguration();
 
 		// Instantiate all remaining (non-lazy-init) singletons.
-		//初始化所有的非懒加载的单实例Bean
+		//day09：初始化所有的非懒加载的单实例Bean
 		beanFactory.preInstantiateSingletons();
 	}
 

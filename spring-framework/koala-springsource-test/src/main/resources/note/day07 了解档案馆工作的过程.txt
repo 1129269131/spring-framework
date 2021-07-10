@@ -1,0 +1,4 @@
+一、
+	1、给 DefaultListableBeanFactory.java 类的 registerBeanDefinition() 方法打断点
+	2、debug运行 MainTest02.java 类
+	2、查看idea的调用堆栈，从下往上查看它的调用过程

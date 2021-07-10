@@ -76,8 +76,8 @@ org/springframework/core/task/support/ExecutorServiceAdapter.java
  org.springframework.core.task.support.ExecutorServiceAdapter
 org/springframework/lang/package-info.java
  org.springframework.lang.package-info
-org/springframework/core/io/support/ResourcePropertySource.java
- org.springframework.core.io.support.ResourcePropertySource
+org/springframework/core/io/buffer/package-info.java
+ org.springframework.core.io.buffer.package-info
 org/springframework/core/codec/NettyByteBufEncoder.java
  org.springframework.core.codec.NettyByteBufEncoder
 org/springframework/core/io/buffer/DataBufferWrapper.java
@@ -515,8 +515,8 @@ org/springframework/core/annotation/SynthesizedAnnotation.java
  org.springframework.core.annotation.SynthesizedAnnotation
 org/springframework/util/InvalidMimeTypeException.java
  org.springframework.util.InvalidMimeTypeException
-org/springframework/core/io/support/DefaultPropertySourceFactory.java
- org.springframework.core.io.support.DefaultPropertySourceFactory
+org/springframework/core/type/filter/AbstractTypeHierarchyTraversingFilter.java
+ org.springframework.core.type.filter.AbstractTypeHierarchyTraversingFilter
 org/springframework/asm/ByteVector.java
  org.springframework.asm.ByteVector
 org/springframework/util/comparator/NullSafeComparator.java
@@ -724,8 +724,8 @@ org/springframework/core/NestedCheckedException.java
  org.springframework.core.NestedCheckedException
 org/springframework/core/codec/CodecException.java
  org.springframework.core.codec.CodecException
-org/springframework/core/io/support/EncodedResource.java
- org.springframework.core.io.support.EncodedResource
+org/springframework/core/ReactiveAdapter.java
+ org.springframework.core.ReactiveAdapter
 org/springframework/core/type/classreading/SimpleMethodMetadata.java
  org.springframework.core.type.classreading.SimpleMethodMetadata
 org/springframework/core/convert/converter/ConverterRegistry.java
@@ -804,8 +804,9 @@ org/springframework/core/env/MissingRequiredPropertiesException.java
 org/springframework/core/annotation/AnnotatedElementUtils.java
  org.springframework.core.annotation.AnnotatedElementUtils
  org.springframework.core.annotation.AnnotatedElementUtils$AnnotatedElementForAnnotations
-org/springframework/core/io/support/PropertiesLoaderUtils.java
- org.springframework.core.io.support.PropertiesLoaderUtils
+org/springframework/core/type/classreading/CachingMetadataReaderFactory.java
+ org.springframework.core.type.classreading.CachingMetadataReaderFactory
+ org.springframework.core.type.classreading.CachingMetadataReaderFactory$LocalResourceCache
 org/springframework/core/type/classreading/SimpleMetadataReaderFactory.java
  org.springframework.core.type.classreading.SimpleMetadataReaderFactory
 org/springframework/core/type/classreading/package-info.java
@@ -947,8 +948,8 @@ org/springframework/util/ReflectionUtils.java
  org.springframework.util.ReflectionUtils$FieldFilter
  org.springframework.util.ReflectionUtils$MethodCallback
  org.springframework.util.ReflectionUtils$MethodFilter
-org/springframework/core/io/support/PropertySourceFactory.java
- org.springframework.core.io.support.PropertySourceFactory
+org/springframework/core/KotlinDetector.java
+ org.springframework.core.KotlinDetector
 org/springframework/asm/Handler.java
  org.springframework.asm.Handler
 org/springframework/util/xml/StaxEventHandler.java
@@ -970,8 +971,8 @@ org/springframework/core/io/WritableResource.java
  org.springframework.core.io.WritableResource
 org/springframework/core/NestedExceptionUtils.java
  org.springframework.core.NestedExceptionUtils
-org/springframework/core/io/support/PropertiesLoaderSupport.java
- org.springframework.core.io.support.PropertiesLoaderSupport
+org/springframework/core/codec/AbstractDataBufferDecoder.java
+ org.springframework.core.codec.AbstractDataBufferDecoder
 org/springframework/core/style/DefaultToStringStyler.java
  org.springframework.core.style.DefaultToStringStyler
 org/springframework/core/env/SystemEnvironmentPropertySource.java
@@ -1193,16 +1194,15 @@ org/springframework/core/annotation/SynthesizingMethodParameter.java
  org.springframework.core.annotation.SynthesizingMethodParameter
 org/springframework/core/env/EnvironmentCapable.java
  org.springframework.core.env.EnvironmentCapable
-org/springframework/core/io/buffer/package-info.java
- org.springframework.core.io.buffer.package-info
-org/springframework/core/KotlinDetector.java
- org.springframework.core.KotlinDetector
-org/springframework/core/type/classreading/CachingMetadataReaderFactory.java
- org.springframework.core.type.classreading.CachingMetadataReaderFactory
- org.springframework.core.type.classreading.CachingMetadataReaderFactory$LocalResourceCache
-org/springframework/core/codec/AbstractDataBufferDecoder.java
- org.springframework.core.codec.AbstractDataBufferDecoder
-org/springframework/core/ReactiveAdapter.java
- org.springframework.core.ReactiveAdapter
-org/springframework/core/type/filter/AbstractTypeHierarchyTraversingFilter.java
- org.springframework.core.type.filter.AbstractTypeHierarchyTraversingFilter
+org/springframework/core/io/support/DefaultPropertySourceFactory.java
+ org.springframework.core.io.support.DefaultPropertySourceFactory
+org/springframework/core/io/support/EncodedResource.java
+ org.springframework.core.io.support.EncodedResource
+org/springframework/core/io/support/PropertiesLoaderSupport.java
+ org.springframework.core.io.support.PropertiesLoaderSupport
+org/springframework/core/io/support/PropertiesLoaderUtils.java
+ org.springframework.core.io.support.PropertiesLoaderUtils
+org/springframework/core/io/support/PropertySourceFactory.java
+ org.springframework.core.io.support.PropertySourceFactory
+org/springframework/core/io/support/ResourcePropertySource.java
+ org.springframework.core.io.support.ResourcePropertySource

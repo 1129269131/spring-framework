@@ -249,11 +249,11 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 			String name, @Nullable Class<T> requiredType, @Nullable Object[] args, boolean typeCheckOnly)
 			throws BeansException {
 
-		String beanName = transformedBeanName(name); //转换Bean名字
+		String beanName = transformedBeanName(name); //day09：转换Bean名字
 		Object beanInstance;
 
 		// 先检查单实例bean的缓存 Eagerly check singleton cache for manually registered singletons.
-		Object sharedInstance = getSingleton(beanName); //检查缓存中有没有，如果是第一次获取肯定是没有的
+		Object sharedInstance = getSingleton(beanName); //day09：检查缓存中有没有，如果是第一次获取肯定是没有的
 		if (sharedInstance != null && args == null) {
 			if (logger.isTraceEnabled()) {
 				if (isSingletonCurrentlyInCreation(beanName)) {
@@ -312,14 +312,14 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 				// Guarantee initialization of beans that the current bean depends on.
 				String[] dependsOn = mbd.getDependsOn();
 				if (dependsOn != null) {
-					for (String dep : dependsOn) { //看当前Bean有没有依赖其他Bean
+					for (String dep : dependsOn) { //day09：看当前Bean有没有依赖其他Bean
 						if (isDependent(beanName, dep)) {
 							throw new BeanCreationException(mbd.getResourceDescription(), beanName,
 									"Circular depends-on relationship between '" + beanName + "' and '" + dep + "'");
 						}
 						registerDependentBean(dep, beanName);
 						try {
-							getBean(dep); //依赖了其他bean，就先获取其他的哪些bean
+							getBean(dep); //day09：依赖了其他bean，就先获取其他的那些bean
 						}
 						catch (NoSuchBeanDefinitionException ex) {
 							throw new BeanCreationException(mbd.getResourceDescription(), beanName,
@@ -328,11 +328,11 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 					}
 				}
 
-				// 创建bean的实例；Create bean instance.
+				//day09：创建bean的实例；Create bean instance.
 				if (mbd.isSingleton()) {
 					sharedInstance = getSingleton(beanName, () -> {
 						try {
-							return createBean(beanName, mbd, args);  //创建bean对象的实例
+							return createBean(beanName, mbd, args);  //day09：创建bean对象的实例
 						}
 						catch (BeansException ex) {
 							// Explicitly remove instance from singleton cache: It might have been put there

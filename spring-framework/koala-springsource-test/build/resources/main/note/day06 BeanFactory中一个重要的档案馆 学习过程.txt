@@ -1,0 +1,5 @@
+一、
+	1、查看 BeanFactory.java 接口
+	2、按 Ctrl+F12 查看接口的所有方法
+	3、类中 右键 --> Diagrams --> Show Diagram... --> 选择 Java Classes --> 打开的类图中右键选择 Show Implementations 查看它的实现子类 --> 打开子类中的 所有接口 --> 打开接口下的实现类观察
+	4、参考 Spring源码解析.pptx 中的章节： 核心组件接口分析-Resource、核心组件接口分析-BeanFactory 

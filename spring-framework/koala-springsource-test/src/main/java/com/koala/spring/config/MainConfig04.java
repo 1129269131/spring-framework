@@ -10,5 +10,4 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("com.koala.spring")
 @Configuration
 public class MainConfig04 {
-
 }

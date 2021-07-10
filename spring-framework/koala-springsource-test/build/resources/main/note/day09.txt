@@ -1,0 +1,7 @@
+一、
+	1、运行 AnnotationMainTest06.java 类查看运行结果
+	
+二、
+	1、给 Person05.java 类的构造器打上断点 + Person05.java 类的 setApplicationContext() 方法打上断点
+	2、debug运行 AnnotationMainTest07.java 类
+	3、查看idea的调用堆栈，从下往上查看它的调用过程

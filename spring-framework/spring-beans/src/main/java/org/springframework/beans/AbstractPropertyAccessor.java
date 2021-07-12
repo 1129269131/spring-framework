@@ -97,7 +97,7 @@ public abstract class AbstractPropertyAccessor extends TypeConverterSupport impl
 		}
 		try {
 			for (PropertyValue pv : propertyValues) {
-				// 遍历所有的属性进行赋值。setPropertyValue may throw any BeansException, which won't be caught
+				// day10：遍历所有的属性进行赋值。setPropertyValue may throw any BeansException, which won't be caught
 				// here, if there is a critical failure such as no matching field.
 				// We can attempt to deal only with less serious exceptions.
 				try {

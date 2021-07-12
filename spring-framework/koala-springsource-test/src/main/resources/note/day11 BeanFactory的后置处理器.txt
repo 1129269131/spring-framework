@@ -1,0 +1,5 @@
+一、BeanFactory的后置处理器
+	1、给 com.koala.spring.processor.factory 下的所有类的 所有方法打上断点
+	2、debug运行 MainTest03.java 类
+	3、放行查看调用的方法（Resume Program）
+	4、查看idea的调用堆栈，从下往上查看它的调用过程

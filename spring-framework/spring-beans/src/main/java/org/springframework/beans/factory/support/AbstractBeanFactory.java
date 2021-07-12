@@ -156,7 +156,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 	/** String resolvers to apply e.g. to annotation attribute values. */
 	private final List<StringValueResolver> embeddedValueResolvers = new CopyOnWriteArrayList<>();
 
-	/** BeanPostProcessors to apply. 保存了所有的Bean后置增强器 */
+	/** BeanPostProcessors to apply. day12：保存了所有的Bean后置增强器 */
 	private final List<BeanPostProcessor> beanPostProcessors = new BeanPostProcessorCacheAwareList();
 
 	/** Cache of pre-filtered post-processors. */
@@ -537,7 +537,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 		String beanName = transformedBeanName(name);
 		boolean isFactoryDereference = BeanFactoryUtils.isFactoryDereference(name);
 
-		// 检查是否已经有这个beanName的单例对象，有了直接用对象的Class，没有可以最后一次决定这个组件的类型；SmartInstantiationAwareBeanPostProcessor.predictBeanType() Check manually registered singletons.
+		// day13：检查是否已经有这个beanName的单例对象，有了直接用对象的Class，没有可以最后一次决定这个组件的类型；SmartInstantiationAwareBeanPostProcessor.predictBeanType() Check manually registered singletons.
 		Object beanInstance = getSingleton(beanName, false);
 		if (beanInstance != null && beanInstance.getClass() != NullBean.class) {
 			if (beanInstance instanceof FactoryBean) {
@@ -620,7 +620,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 			}
 		}
 
-		// 通过后置处理器，可以返回自定义的类型 If we couldn't use the target type, try regular prediction.
+		// day13：通过后置处理器，可以返回自定义的类型 If we couldn't use the target type, try regular prediction.
 		if (predictedType == null) {
 			predictedType = predictBeanType(beanName, mbd, typesToMatch);
 			if (predictedType == null) {

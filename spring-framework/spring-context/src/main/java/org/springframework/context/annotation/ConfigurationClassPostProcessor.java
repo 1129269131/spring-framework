@@ -231,7 +231,7 @@ public class ConfigurationClassPostProcessor implements BeanDefinitionRegistryPo
 	/**
 	 * Derive further bean definitions from the configuration classes in the registry.
 	 */
-	@Override //把配置类中所有bean的定义信息导入进来。
+	@Override //day11：把配置类中所有bean的定义信息导入进来。
 	public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) {
 		int registryId = System.identityHashCode(registry);
 		if (this.registriesPostProcessed.contains(registryId)) {
@@ -285,7 +285,7 @@ public class ConfigurationClassPostProcessor implements BeanDefinitionRegistryPo
 				}
 			}
 			else if (ConfigurationClassUtils.checkConfigurationClassCandidate(beanDef, this.metadataReaderFactory)) {
-				configCandidates.add(new BeanDefinitionHolder(beanDef, beanName)); //将配置类加到候选集合里面，等待处理
+				configCandidates.add(new BeanDefinitionHolder(beanDef, beanName)); //day11：将配置类加到候选集合里面，等待处理
 			}
 		}
 
@@ -294,7 +294,7 @@ public class ConfigurationClassPostProcessor implements BeanDefinitionRegistryPo
 			return;
 		}
 
-		// 对所有的配置类进行排序，Sort by previously determined @Order value, if applicable
+		// day11：对所有的配置类进行排序，Sort by previously determined @Order value, if applicable
 		configCandidates.sort((bd1, bd2) -> {
 			int i1 = ConfigurationClassUtils.getOrder(bd1.getBeanDefinition());
 			int i2 = ConfigurationClassUtils.getOrder(bd2.getBeanDefinition());
@@ -307,7 +307,7 @@ public class ConfigurationClassPostProcessor implements BeanDefinitionRegistryPo
 			sbr = (SingletonBeanRegistry) registry;
 			if (!this.localBeanNameGeneratorSet) {
 				BeanNameGenerator generator = (BeanNameGenerator) sbr.getSingleton(
-						AnnotationConfigUtils.CONFIGURATION_BEAN_NAME_GENERATOR); //getBean--getSingleton，获取创建一个internalConfigurationBeanNameGenerator来用来生成配置类的名字
+						AnnotationConfigUtils.CONFIGURATION_BEAN_NAME_GENERATOR); //day11：getBean--getSingleton，获取创建一个internalConfigurationBeanNameGenerator来用来生成配置类的名字
 				if (generator != null) {
 					this.componentScanBeanNameGenerator = generator;
 					this.importBeanNameGenerator = generator;
@@ -319,7 +319,7 @@ public class ConfigurationClassPostProcessor implements BeanDefinitionRegistryPo
 			this.environment = new StandardEnvironment();
 		}
 
-		//由ConfigurationClassParser解析每一个配置类 Parse each @Configuration class
+		//day11：由ConfigurationClassParser解析每一个配置类 Parse each @Configuration class
 		ConfigurationClassParser parser = new ConfigurationClassParser(
 				this.metadataReaderFactory, this.problemReporter, this.environment,
 				this.resourceLoader, this.componentScanBeanNameGenerator, registry);

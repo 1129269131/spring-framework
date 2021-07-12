@@ -1,0 +1,6 @@
+一、后置处理器干预生命周期的过程--对象创建之前
+	1、给 com.koala.spring.processor.bean 下的所有类的 所有重写的方法打上断点
+	2、给 Cat05.java 类的构造器、afterPropertiesSet()方法打上断点
+	3、debug运行 MainTest03.java 类
+	4、放行查看调用的方法（Resume Program）
+	5、查看idea的调用堆栈，从下往上查看它的调用过程

@@ -394,7 +394,7 @@ public class AutowiredAnnotationBeanPostProcessor implements SmartInstantiationA
 
 	@Override
 	public PropertyValues postProcessProperties(PropertyValues pvs, Object bean, String beanName) {
-		InjectionMetadata metadata = findAutowiringMetadata(beanName, bean.getClass(), pvs);//找到自动装配的元信息
+		InjectionMetadata metadata = findAutowiringMetadata(beanName, bean.getClass(), pvs);//day10：找到自动装配的元信息
 		try {
 			metadata.inject(bean, beanName, pvs);
 		}
@@ -450,7 +450,7 @@ public class AutowiredAnnotationBeanPostProcessor implements SmartInstantiationA
 				if (InjectionMetadata.needsRefresh(metadata, clazz)) {
 					if (metadata != null) {
 						metadata.clear(pvs);
-					}//下面是分析当前类方法或者属性有没有标注@Autowired等自动赋值的注解
+					}//day10：下面是分析当前类方法或者属性有没有标注@Autowired等自动赋值的注解
 					metadata = buildAutowiringMetadata(clazz);
 					this.injectionMetadataCache.put(cacheKey, metadata);
 				}
@@ -469,7 +469,7 @@ public class AutowiredAnnotationBeanPostProcessor implements SmartInstantiationA
 
 		do {
 			final List<InjectionMetadata.InjectedElement> currElements = new ArrayList<>();
-            //找所有属性中标注了@Autowired\@Value\@Inject注解
+            //day10：找所有属性中标注了@Autowired\@Value\@Inject注解
 			ReflectionUtils.doWithLocalFields(targetClass, field -> {
 				MergedAnnotation<?> ann = findAutowiredAnnotation(field);
 				if (ann != null) {
@@ -483,7 +483,7 @@ public class AutowiredAnnotationBeanPostProcessor implements SmartInstantiationA
 					currElements.add(new AutowiredFieldElement(field, required));
 				}
 			});
-			//拿到所有方法，看有没有@Autowired注解
+			//day10：拿到所有方法，看有没有@Autowired注解
 			ReflectionUtils.doWithLocalMethods(targetClass, method -> {
 				Method bridgedMethod = BridgeMethodResolver.findBridgedMethod(method);
 				if (!BridgeMethodResolver.isVisibilityBridgeMethodPair(method, bridgedMethod)) {

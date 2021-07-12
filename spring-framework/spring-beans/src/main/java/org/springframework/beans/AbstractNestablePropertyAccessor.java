@@ -246,13 +246,13 @@ public abstract class AbstractNestablePropertyAccessor extends AbstractPropertyA
 		nestedPa.setPropertyValue(tokens, new PropertyValue(propertyName, value));
 	}
 
-	@Override  //利用反射进行属性赋值的办法 PropertyValue
+	@Override  //day13：利用反射进行属性赋值的办法 PropertyValue
 	public void setPropertyValue(PropertyValue pv) throws BeansException {
 		PropertyTokenHolder tokens = (PropertyTokenHolder) pv.resolvedTokens;
 		if (tokens == null) {
 			String propertyName = pv.getName();
 			AbstractNestablePropertyAccessor nestedPa;
-			try { //级联属性的赋值都没问题
+			try { //day13：级联属性的赋值都没问题
 				nestedPa = getPropertyAccessorForPropertyPath(propertyName);
 			}
 			catch (NotReadablePropertyException ex) {
@@ -262,7 +262,7 @@ public abstract class AbstractNestablePropertyAccessor extends AbstractPropertyA
 			tokens = getPropertyNameTokens(getFinalPath(nestedPa, propertyName));
 			if (nestedPa == this) {
 				pv.getOriginalPropertyValue().resolvedTokens = tokens;
-			} //A a.b.c
+			} //day10：A a.b.c
 			nestedPa.setPropertyValue(tokens, pv);
 		}
 		else {

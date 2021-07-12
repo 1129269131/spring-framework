@@ -1,0 +1,45 @@
+package com.koala.spring.processor.bean;
+
+import org.springframework.beans.BeansException;
+import org.springframework.beans.PropertyValues;
+import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
+import org.springframework.stereotype.Component;
+
+/**
+ * day11：Bean组件的 PostProcessor；
+ * Create by koala on 2021-07-11
+ */
+@Component
+public class MyInstantiationAwareBeanPostProcessor implements InstantiationAwareBeanPostProcessor {
+
+	public MyInstantiationAwareBeanPostProcessor() {
+		System.out.println("MyInstantiationAwareBeanPostProcessor...");
+	}
+
+	//day13：初始化之前进行后置处理，Spring留给我们给这个组件创建对象的回调。
+	@Override
+	public Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException {
+		System.out.println("MyInstantiationAwareBeanPostProcessor...postProcessBeforeInstantiation=>" + beanClass + "--" + beanName); //day13：举例：if(class.isAssFrom(Cat.class)){return new Dog()}
+		return null; //day13：如果我们自己创建了对象返回。Spring则不会帮我们创建对象，用我们自己创建的对象 	问题：我们创建的这个对象，Spring会保存单实例？还是每次getBean都调到我们这里创建一个新的？
+	}
+
+	@Override
+	public boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {
+		System.out.println("MyInstantiationAwareBeanPostProcessor...postProcessAfterInstantiation=>" + bean + "--" + beanName); //day13：提前改变一些Spring不管的bean里面的属性
+		return true; //day13：返回false则bean的赋值全部结束
+	}
+
+	//day13：解析自定义注解进行属性值注入；pvs 封装了所有的属性信息。
+	@Override
+	public PropertyValues postProcessProperties(PropertyValues pvs, Object bean, String beanName) throws BeansException { //day13：@GuiguValue();redis
+		System.out.println("MyInstantiationAwareBeanPostProcessor...postProcessProperties=>" + bean + "--" + beanName);
+		return null;
+	}
+
+	//过期方法
+	/*public PropertyValues postProcessPropertyValues(
+			PropertyValues pvs, PropertyDescriptor[] pds, Object bean, String beanName) throws BeansException {
+		System.out.println("MyInstantiationAwareBeanPostProcessor...postProcessProperties");
+		return pvs;
+	}*/
+}

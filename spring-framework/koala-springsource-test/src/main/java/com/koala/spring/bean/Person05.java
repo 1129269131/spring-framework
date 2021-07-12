@@ -9,6 +9,9 @@ import org.springframework.stereotype.Component;
  * day09：ioc容器的获取方式（使用implements ApplicationContextAware）
  * 	Aware接口；帮我们装配Spring底层的一些组件
  * 		1、Bean的功能增强全部都是由 BeanPostProcessor+InitializingBean 合起来完成的
+ *
+ * Person05为什么能把 ApplicationContext、MessageSource当为自己的参数传进来。
+ * 	  - 通过实现接口的方式自动注入了 ApplicationContext、MessageSource。是由BeanPostProcessor（Bean的后置处理器完成的）
  * Create by koala on 2021-07-05
  */
 @Component

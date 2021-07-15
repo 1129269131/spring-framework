@@ -252,7 +252,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 		String beanName = transformedBeanName(name); //day09：转换Bean名字
 		Object beanInstance;
 
-		// 先检查单实例bean的缓存 Eagerly check singleton cache for manually registered singletons.
+		// day15：先检查单实例bean的缓存 Eagerly check singleton cache for manually registered singletons.
 		Object sharedInstance = getSingleton(beanName); //day09：检查缓存中有没有，如果是第一次获取肯定是没有的
 		if (sharedInstance != null && args == null) {
 			if (logger.isTraceEnabled()) {
@@ -267,16 +267,16 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 			beanInstance = getObjectForBeanInstance(sharedInstance, name, beanName, null);
 		}
 
-		else { //默认第一次获取组件都会进入else环节
+		else { //day15：默认第一次获取组件都会进入else环节
 			// Fail if we're already creating this bean instance:
 			// We're assumably within a circular reference.
 			if (isPrototypeCurrentlyInCreation(beanName)) {
 				throw new BeanCurrentlyInCreationException(beanName);
 			}
 
-			// 拿到整个beanFactory的父工厂；看父工厂没有，从父工厂先尝试获取组件； Check if bean definition exists in this factory.
+			// day15：拿到整个beanFactory的父工厂；看父工厂没有，从父工厂先尝试获取组件； Check if bean definition exists in this factory.
 			BeanFactory parentBeanFactory = getParentBeanFactory();
-			if (parentBeanFactory != null && !containsBeanDefinition(beanName)) { //以下开始从父工厂获取组件
+			if (parentBeanFactory != null && !containsBeanDefinition(beanName)) { //day15：以下开始从父工厂获取组件
 				// Not found -> check parent.
 				String nameToLookup = originalBeanName(name);
 				if (parentBeanFactory instanceof AbstractBeanFactory) {
@@ -297,7 +297,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 			}
 
 			if (!typeCheckOnly) {
-				markBeanAsCreated(beanName); //标记当前beanName的bean已经被创建
+				markBeanAsCreated(beanName); //day15：标记当前beanName的bean已经被创建
 			}
 
 			StartupStep beanCreation = this.applicationStartup.start("spring.beans.instantiate")

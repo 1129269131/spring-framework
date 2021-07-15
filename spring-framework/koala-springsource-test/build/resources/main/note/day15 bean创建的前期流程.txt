@@ -1,0 +1,7 @@
+一、工厂bean独有的初始化方式
+	1、给 DefaultListableBeanFactory.java 类的 RootBeanDefinition bd = getMergedLocalBeanDefinition(beanName); 和下面 getBean(beanName); 地方打上断点
+	2、可以在两处断点上右键 --》Condition: 处输入 --》例如：beanName.equals("cat04") 那么只有符合条件的断点才能进来
+	3、给 AbstractBeanFactory.java 抽象类的 Object sharedInstance = getSingleton(beanName); 处打上断点
+	4、可以在断点上右键 --》Condition: 处输入 --》例如：beanName.equals("cat04") 那么只有符合条件的断点才能进来
+	5、debug运行 AnnotationMainTest09.java 类
+	6、查看idea的调用堆栈，从下往上查看它的调用过程

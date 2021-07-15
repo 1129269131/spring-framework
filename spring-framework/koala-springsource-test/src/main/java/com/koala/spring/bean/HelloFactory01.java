@@ -14,12 +14,12 @@ import org.springframework.stereotype.Component;
  * 		MyBatis和Spring的整合	SqlSessionFactoryBean
  * Create by koala on 2021-07-10
  */
-@Component
+@Component //day14：也可以实现 SmartFactoryBean。指定提前加载
 public class HelloFactory01 implements FactoryBean<Hello01>  {
 
 	@Override
 	public Hello01 getObject() throws Exception {
-		return new Hello01(); //这是最终获取到的对象
+		return new Hello01(); //day14：这是最终获取到的对象
 	}
 
 	@Override

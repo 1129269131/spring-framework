@@ -178,9 +178,9 @@ public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements
 	 */
 	@Nullable  //双检查锁
 	protected Object getSingleton(String beanName, boolean allowEarlyReference) {
-		//先检查单例缓存池，获取当前对象  Quick check for existing instance without full singleton lock
+		//day15：先检查单例缓存池，获取当前对象  Quick check for existing instance without full singleton lock
 		Object singletonObject = this.singletonObjects.get(beanName); //一级缓存
-		if (singletonObject == null && isSingletonCurrentlyInCreation(beanName)) { //如果当前bean正在创建过程中，而且缓存中没有则继续
+		if (singletonObject == null && isSingletonCurrentlyInCreation(beanName)) { //day15：如果当前bean正在创建过程中，而且缓存中没有则继续
 			singletonObject = this.earlySingletonObjects.get(beanName); //二级
 			if (singletonObject == null && allowEarlyReference) {
 				synchronized (this.singletonObjects) {
@@ -215,7 +215,7 @@ public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements
 		Assert.notNull(beanName, "Bean name must not be null");
 		synchronized (this.singletonObjects) {
 			Object singletonObject = this.singletonObjects.get(beanName);
-			if (singletonObject == null) { //单实例池子里面没有当前对象（说明没有创建完成）
+			if (singletonObject == null) { //day16：单实例池子里面没有当前对象（说明没有创建完成）
 				if (this.singletonsCurrentlyInDestruction) {
 					throw new BeanCreationNotAllowedException(beanName,
 							"Singleton bean creation not allowed while singletons of this factory are in destruction " +
@@ -224,7 +224,7 @@ public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements
 				if (logger.isDebugEnabled()) {
 					logger.debug("Creating shared instance of singleton bean '" + beanName + "'");
 				}
-				beforeSingletonCreation(beanName); //单实例创建之前
+				beforeSingletonCreation(beanName); //day16：单实例创建之前
 				boolean newSingleton = false;
 				boolean recordSuppressedExceptions = (this.suppressedExceptions == null);
 				if (recordSuppressedExceptions) {

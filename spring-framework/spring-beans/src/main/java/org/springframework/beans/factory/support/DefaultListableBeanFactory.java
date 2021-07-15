@@ -930,7 +930,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 			RootBeanDefinition bd = getMergedLocalBeanDefinition(beanName); //day10：开始解析文件的时候每一个bean标签被解析封装成一个BeanDefinition
 			if (!bd.isAbstract() && bd.isSingleton() && !bd.isLazyInit()) {
 				if (isFactoryBean(beanName)) { //day10：如果是FactoryBean则执行下面逻辑
-					Object bean = getBean(FACTORY_BEAN_PREFIX + beanName); //得到HelloFactory
+					Object bean = getBean(FACTORY_BEAN_PREFIX + beanName); //day14：得到HelloFactory01
 					if (bean instanceof FactoryBean) {
 						FactoryBean<?> factory = (FactoryBean<?>) bean;
 						boolean isEagerInit;
@@ -1224,7 +1224,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 			ResolvableType requiredType, @Nullable Object[] args, boolean nonUniqueAsNull) throws BeansException {
 
 		Assert.notNull(requiredType, "Required type must not be null");
-		String[] candidateNames = getBeanNamesForType(requiredType); //按照类型获取组件
+		String[] candidateNames = getBeanNamesForType(requiredType); //day14：按照类型获取组件
 
 		if (candidateNames.length > 1) {
 			List<String> autowireCandidates = new ArrayList<>(candidateNames.length);

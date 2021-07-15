@@ -144,6 +144,6 @@ public interface FactoryBean<T> {
 	 */
 	default boolean isSingleton() {
 		return true;
-	}  //也可以调成不是单例
+	}  //day14：也可以调成不是单例
 
 }

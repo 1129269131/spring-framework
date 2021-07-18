@@ -312,7 +312,7 @@ public class ClassPathScanningCandidateComponentProvider implements EnvironmentC
 			return addCandidateComponentsFromIndex(this.componentsIndex, basePackage);
 		}
 		else {
-			return scanCandidateComponents(basePackage); //扫描所有组件
+			return scanCandidateComponents(basePackage); //day21：扫描所有组件
 		}
 	}
 
@@ -425,9 +425,9 @@ public class ClassPathScanningCandidateComponentProvider implements EnvironmentC
 					logger.trace("Scanning " + resource);
 				}
 				if (resource.isReadable()) {
-					try { //生成每一个资源的元数据信息
+					try { //day21：生成每一个资源的元数据信息
 						MetadataReader metadataReader = getMetadataReaderFactory().getMetadataReader(resource);
-						if (isCandidateComponent(metadataReader)) { //如果当前类在扫描范围
+						if (isCandidateComponent(metadataReader)) { //day21：如果当前类在扫描范围
 							ScannedGenericBeanDefinition sbd = new ScannedGenericBeanDefinition(metadataReader);
 							sbd.setSource(resource);
 							if (isCandidateComponent(sbd)) {

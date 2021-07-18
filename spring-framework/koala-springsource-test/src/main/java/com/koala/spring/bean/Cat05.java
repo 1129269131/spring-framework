@@ -1,11 +1,13 @@
 package com.koala.spring.bean;
 
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.stereotype.Component;
 
 /**
  * day11
  * Create by koala on 2021-07-05
  */
+@Component
 public class Cat05 implements InitializingBean {
 
 	public Cat05() {

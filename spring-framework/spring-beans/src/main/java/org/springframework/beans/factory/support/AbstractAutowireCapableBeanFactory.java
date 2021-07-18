@@ -584,7 +584,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 			}
 		}
 
-		// 提前暴露单实例。专门来解决循环引用问题；Eagerly cache singletons to be able to resolve circular references
+		// day17：提前暴露单实例。专门来解决循环引用问题；Eagerly cache singletons to be able to resolve circular references
 		// even when triggered by lifecycle interfaces like BeanFactoryAware.
 		boolean earlySingletonExposure = (mbd.isSingleton() && this.allowCircularReferences &&
 				isSingletonCurrentlyInCreation(beanName));
@@ -611,9 +611,9 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 						mbd.getResourceDescription(), beanName, "Initialization of bean failed", ex);
 			}
 		}
-		//早期单实例暴露
+		//day18：早期单实例暴露
 		if (earlySingletonExposure) {
-			Object earlySingletonReference = getSingleton(beanName, false); //检查早期缓存中是否存在这个组件
+			Object earlySingletonReference = getSingleton(beanName, false); //day18：检查早期缓存中是否存在这个组件
 			if (earlySingletonReference != null) {
 				if (exposedObject == bean) {
 					exposedObject = earlySingletonReference;

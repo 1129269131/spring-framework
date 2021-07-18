@@ -341,7 +341,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 							destroySingleton(beanName);
 							throw ex;
 						}
-					}); //看当前bean是否是FactoryBean
+					}); //day18：看当前bean是否是FactoryBean
 					beanInstance = getObjectForBeanInstance(sharedInstance, name, beanName, mbd);
 				}
 
@@ -394,7 +394,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 				beanCreation.end();
 			}
 		}
-		//转Object为Bean的T类型
+		//day18：转Object为Bean的T类型
 		return adaptBeanInstance(name, beanInstance, requiredType);
 	}
 

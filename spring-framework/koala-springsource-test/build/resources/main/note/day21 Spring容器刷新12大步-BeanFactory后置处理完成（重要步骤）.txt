@@ -1,0 +1,7 @@
+一、Spring容器刷新12大步-BeanFactory后置处理完成（重要步骤）（核心类：AbstractApplicationContext.java）
+	1、给 AnnotationConfigApplicationContext.java 类的 refresh() 方法打上断点
+	2、给 AbstractBeanDefinition.java 抽象类的所有构造器打上断点
+	3、debug运行 AnnotationMainTest10.java 类
+	4、当debug运行到AnnotationConfigApplicationContext.java 类的 refresh() 方法上时，Step Into 进入该方法
+	4、查看idea的调用堆栈，从下往上查看它的调用过程
+    5、不断的 Step Over，勾勒出 day21-容器刷新流程.jpg 所示的过程

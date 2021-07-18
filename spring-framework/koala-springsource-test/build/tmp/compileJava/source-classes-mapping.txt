@@ -15,16 +15,16 @@ com/koala/spring/config/MainConfig01.java
  com.koala.spring.config.MainConfig01
 com/koala/spring/processor/factory/MyBeanFactoryPostProcessor.java
  com.koala.spring.processor.factory.MyBeanFactoryPostProcessor
-com/koala/spring/MainTest02.java
- com.koala.spring.MainTest02
+com/koala/spring/processor/bean/MyBeanPostProcessor.java
+ com.koala.spring.processor.bean.MyBeanPostProcessor
 com/koala/spring/bean/Cat04.java
  com.koala.spring.bean.Cat04
 com/koala/spring/bean/Person03.java
  com.koala.spring.bean.Person03
 com/koala/spring/bean/Cat03.java
  com.koala.spring.bean.Cat03
-com/koala/spring/bean/Hello01.java
- com.koala.spring.bean.Hello01
+com/koala/spring/processor/factory/MyBeanDefinitionRegistryPostProcessor.java
+ com.koala.spring.processor.factory.MyBeanDefinitionRegistryPostProcessor
 com/koala/spring/bean/Person04.java
  com.koala.spring.bean.Person04
 com/koala/spring/bean/Person06.java
@@ -35,6 +35,16 @@ com/koala/spring/bean/Person05.java
  com.koala.spring.bean.Person05
 com/koala/spring/config/MainConfig04.java
  com.koala.spring.config.MainConfig04
+com/koala/spring/bean/Hello01.java
+ com.koala.spring.bean.Hello01
+com/koala/spring/bean/HelloFactory01.java
+ com.koala.spring.bean.HelloFactory01
+com/koala/spring/processor/bean/MyInstantiationAwareBeanPostProcessor.java
+ com.koala.spring.processor.bean.MyInstantiationAwareBeanPostProcessor
+com/koala/spring/processor/bean/MySmartInstantiationAwareBeanPostProcessor.java
+ com.koala.spring.processor.bean.MySmartInstantiationAwareBeanPostProcessor
+com/koala/spring/bean/Cat06.java
+ com.koala.spring.bean.Cat06
 com/koala/spring/AnnotationMainTest01.java
  com.koala.spring.AnnotationMainTest01
 com/koala/spring/MainTest03.java
@@ -53,19 +63,13 @@ com/koala/spring/AnnotationMainTest02.java
  com.koala.spring.AnnotationMainTest02
 com/koala/spring/bean/Cat05.java
  com.koala.spring.bean.Cat05
-com/koala/spring/processor/factory/MyBeanDefinitionRegistryPostProcessor.java
- com.koala.spring.processor.factory.MyBeanDefinitionRegistryPostProcessor
-com/koala/spring/AnnotationMainTest03.java
- com.koala.spring.AnnotationMainTest03
-com/koala/spring/AnnotationMainTest06.java
- com.koala.spring.AnnotationMainTest06
-com/koala/spring/processor/bean/MyBeanPostProcessor.java
- com.koala.spring.processor.bean.MyBeanPostProcessor
-com/koala/spring/processor/bean/MyInstantiationAwareBeanPostProcessor.java
- com.koala.spring.processor.bean.MyInstantiationAwareBeanPostProcessor
+com/koala/spring/AnnotationMainTest10.java
+ com.koala.spring.AnnotationMainTest10
 com/koala/spring/AnnotationMainTest09.java
  com.koala.spring.AnnotationMainTest09
-com/koala/spring/processor/bean/MySmartInstantiationAwareBeanPostProcessor.java
- com.koala.spring.processor.bean.MySmartInstantiationAwareBeanPostProcessor
-com/koala/spring/bean/HelloFactory01.java
- com.koala.spring.bean.HelloFactory01
+com/koala/spring/AnnotationMainTest03.java
+ com.koala.spring.AnnotationMainTest03
+com/koala/spring/MainTest02.java
+ com.koala.spring.MainTest02
+com/koala/spring/AnnotationMainTest06.java
+ com.koala.spring.AnnotationMainTest06

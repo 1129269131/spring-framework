@@ -202,7 +202,7 @@ class ConfigurationClassParser {
 	protected final void parse(Class<?> clazz, String beanName) throws IOException {
 		processConfigurationClass(new ConfigurationClass(clazz, beanName), DEFAULT_EXCLUSION_FILTER);
 	}
-	//解析配置类
+	//day21：解析配置类
 	protected final void parse(AnnotationMetadata metadata, String beanName) throws IOException {
 		processConfigurationClass(new ConfigurationClass(metadata, beanName), DEFAULT_EXCLUSION_FILTER);
 	}
@@ -226,7 +226,7 @@ class ConfigurationClassParser {
 		if (this.conditionEvaluator.shouldSkip(configClass.getMetadata(), ConfigurationPhase.PARSE_CONFIGURATION)) {
 			return;
 		}
-		//Spring底层大量使用缓存来保证框架速度
+		//day21：Spring底层大量使用缓存来保证框架速度
 		ConfigurationClass existingClass = this.configurationClasses.get(configClass);
 		if (existingClass != null) {
 			if (configClass.isImported()) {
@@ -250,7 +250,7 @@ class ConfigurationClassParser {
 			sourceClass = doProcessConfigurationClass(configClass, sourceClass, filter);
 		}
 		while (sourceClass != null);
-		//只要这个配置类解析过，就放在已经解析好的集合中防止重复解析
+		//day21：只要这个配置类解析过，就放在已经解析好的集合中防止重复解析
 		this.configurationClasses.put(configClass, configClass);
 	}
 
@@ -291,7 +291,7 @@ class ConfigurationClassParser {
 		if (!componentScans.isEmpty() &&
 				!this.conditionEvaluator.shouldSkip(sourceClass.getMetadata(), ConfigurationPhase.REGISTER_BEAN)) {
 			for (AnnotationAttributes componentScan : componentScans) {
-				//使用Scanner把ComponentScan指定的包下的所有组件都扫描进来 The config class is annotated with @ComponentScan -> perform the scan immediately
+				//day21：使用Scanner把ComponentScan指定的包下的所有组件都扫描进来 The config class is annotated with @ComponentScan -> perform the scan immediately
 				Set<BeanDefinitionHolder> scannedBeanDefinitions =
 						this.componentScanParser.parse(componentScan, sourceClass.getMetadata().getClassName());
 				// Check the set of scanned definitions for any further config classes and parse recursively if needed
@@ -307,10 +307,10 @@ class ConfigurationClassParser {
 			}
 		}
 
-		//处理@Import注解的地方【AOP就是利用这个地方导入一个后置处理器的】 Process any @Import annotations
+		//day21：处理@Import注解的地方【AOP就是利用这个地方导入一个后置处理器的】 Process any @Import annotations
 		processImports(configClass, sourceClass, getImports(sourceClass), filter, true);
 
-		//处理@ImportResource  Process any @ImportResource annotations
+		//day21：处理@ImportResource  Process any @ImportResource annotations
 		AnnotationAttributes importResource =
 				AnnotationConfigUtils.attributesFor(sourceClass.getMetadata(), ImportResource.class);
 		if (importResource != null) {
@@ -322,7 +322,7 @@ class ConfigurationClassParser {
 			}
 		}
 
-		//处理@Bean Process individual @Bean methods
+		//day21：处理@Bean Process individual @Bean methods
 		Set<MethodMetadata> beanMethods = retrieveBeanMethodMetadata(sourceClass);
 		for (MethodMetadata methodMetadata : beanMethods) {
 			configClass.addBeanMethod(new BeanMethod(methodMetadata, configClass));

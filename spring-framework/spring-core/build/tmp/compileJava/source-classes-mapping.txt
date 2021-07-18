@@ -284,8 +284,8 @@ org/springframework/util/xml/SimpleTransformErrorListener.java
  org.springframework.util.xml.SimpleTransformErrorListener
 org/springframework/asm/MethodVisitor.java
  org.springframework.asm.MethodVisitor
-org/springframework/core/metrics/ApplicationStartup.java
- org.springframework.core.metrics.ApplicationStartup
+org/springframework/core/io/support/EncodedResource.java
+ org.springframework.core.io.support.EncodedResource
 org/springframework/core/annotation/SynthesizedMergedAnnotationInvocationHandler.java
  org.springframework.core.annotation.SynthesizedMergedAnnotationInvocationHandler
 org/springframework/core/io/buffer/DataBuffer.java
@@ -507,10 +507,8 @@ org/springframework/core/log/CompositeLog.java
  org.springframework.core.log.CompositeLog
 org/springframework/util/xml/StaxSource.java
  org.springframework.util.xml.StaxSource
-org/springframework/core/env/AbstractEnvironment.java
- org.springframework.core.env.AbstractEnvironment
- org.springframework.core.env.AbstractEnvironment$1
- org.springframework.core.env.AbstractEnvironment$2
+org/springframework/core/env/EnvironmentCapable.java
+ org.springframework.core.env.EnvironmentCapable
 org/springframework/core/annotation/SynthesizedAnnotation.java
  org.springframework.core.annotation.SynthesizedAnnotation
 org/springframework/util/InvalidMimeTypeException.java
@@ -903,8 +901,8 @@ org/springframework/asm/FieldVisitor.java
  org.springframework.asm.FieldVisitor
 org/springframework/core/DecoratingClassLoader.java
  org.springframework.core.DecoratingClassLoader
-org/springframework/core/SpringProperties.java
- org.springframework.core.SpringProperties
+org/springframework/core/io/support/PropertiesLoaderSupport.java
+ org.springframework.core.io.support.PropertiesLoaderSupport
 org/springframework/core/convert/support/IdToEntityConverter.java
  org.springframework.core.convert.support.IdToEntityConverter
 org/springframework/core/task/TaskExecutor.java
@@ -1034,8 +1032,8 @@ org/springframework/util/xml/AbstractXMLReader.java
  org.springframework.util.xml.AbstractXMLReader
 org/springframework/core/annotation/Order.java
  org.springframework.core.annotation.Order
-org/springframework/core/io/support/ResourcePropertiesPersister.java
- org.springframework.core.io.support.ResourcePropertiesPersister
+org/springframework/core/io/support/ResourcePropertySource.java
+ org.springframework.core.io.support.ResourcePropertySource
 org/springframework/core/type/filter/AnnotationTypeFilter.java
  org.springframework.core.type.filter.AnnotationTypeFilter
 org/springframework/util/CommonsLogWriter.java
@@ -1097,8 +1095,8 @@ org/springframework/asm/RecordComponentWriter.java
  org.springframework.asm.RecordComponentWriter
 org/springframework/core/convert/Property.java
  org.springframework.core.convert.Property
-org/springframework/objenesis/SpringObjenesis.java
- org.springframework.objenesis.SpringObjenesis
+org/springframework/core/io/support/PropertySourceFactory.java
+ org.springframework.core.io.support.PropertySourceFactory
 org/springframework/core/convert/support/NumberToNumberConverterFactory.java
  org.springframework.core.convert.support.NumberToNumberConverterFactory
  org.springframework.core.convert.support.NumberToNumberConverterFactory$NumberToNumber
@@ -1181,10 +1179,8 @@ org/springframework/util/comparator/BooleanComparator.java
  org.springframework.util.comparator.BooleanComparator
 org/springframework/util/CompositeIterator.java
  org.springframework.util.CompositeIterator
-org/springframework/core/metrics/DefaultApplicationStartup.java
- org.springframework.core.metrics.DefaultApplicationStartup
- org.springframework.core.metrics.DefaultApplicationStartup$DefaultStartupStep
- org.springframework.core.metrics.DefaultApplicationStartup$DefaultStartupStep$DefaultTags
+org/springframework/core/io/support/DefaultPropertySourceFactory.java
+ org.springframework.core.io.support.DefaultPropertySourceFactory
 org/springframework/core/task/package-info.java
  org.springframework.core.task.package-info
 org/springframework/core/OrderComparator.java
@@ -1192,17 +1188,21 @@ org/springframework/core/OrderComparator.java
  org.springframework.core.OrderComparator$OrderSourceProvider
 org/springframework/core/annotation/SynthesizingMethodParameter.java
  org.springframework.core.annotation.SynthesizingMethodParameter
-org/springframework/core/env/EnvironmentCapable.java
- org.springframework.core.env.EnvironmentCapable
-org/springframework/core/io/support/DefaultPropertySourceFactory.java
- org.springframework.core.io.support.DefaultPropertySourceFactory
-org/springframework/core/io/support/EncodedResource.java
- org.springframework.core.io.support.EncodedResource
-org/springframework/core/io/support/PropertiesLoaderSupport.java
- org.springframework.core.io.support.PropertiesLoaderSupport
+org/springframework/core/io/support/ResourcePropertiesPersister.java
+ org.springframework.core.io.support.ResourcePropertiesPersister
+org/springframework/objenesis/SpringObjenesis.java
+ org.springframework.objenesis.SpringObjenesis
+org/springframework/core/metrics/DefaultApplicationStartup.java
+ org.springframework.core.metrics.DefaultApplicationStartup
+ org.springframework.core.metrics.DefaultApplicationStartup$DefaultStartupStep
+ org.springframework.core.metrics.DefaultApplicationStartup$DefaultStartupStep$DefaultTags
+org/springframework/core/SpringProperties.java
+ org.springframework.core.SpringProperties
+org/springframework/core/metrics/ApplicationStartup.java
+ org.springframework.core.metrics.ApplicationStartup
 org/springframework/core/io/support/PropertiesLoaderUtils.java
  org.springframework.core.io.support.PropertiesLoaderUtils
-org/springframework/core/io/support/PropertySourceFactory.java
- org.springframework.core.io.support.PropertySourceFactory
-org/springframework/core/io/support/ResourcePropertySource.java
- org.springframework.core.io.support.ResourcePropertySource
+org/springframework/core/env/AbstractEnvironment.java
+ org.springframework.core.env.AbstractEnvironment
+ org.springframework.core.env.AbstractEnvironment$1
+ org.springframework.core.env.AbstractEnvironment$2

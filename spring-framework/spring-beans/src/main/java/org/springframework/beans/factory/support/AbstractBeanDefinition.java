@@ -203,7 +203,7 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	@Nullable
 	private Resource resource;
 
-	//只要有任何组件需要注册到beanFactory中，必先得有bean的定义信息
+	//day20：只要有任何组件需要注册到beanFactory中，必先得有bean的定义信息
 	/**
 	 * Create a new AbstractBeanDefinition with default settings.
 	 */

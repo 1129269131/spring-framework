@@ -1,0 +1,8 @@
+一、bean的整个生命周期过程（核心类：AbstractAutowireCapableBeanFactory.java）
+	1、给 Cat05.java 类的构造器打上断点
+	2、给 AbstractBeanFactory.java 抽象类的 Object sharedInstance = getSingleton(beanName); 处打上断点
+	3、可以在断点上右键 --》Condition: 处输入 --》例如：beanName.equals("cat05") 那么只有符合条件的断点才能进来
+	4、debug运行 AnnotationMainTest09.java 类
+	5、查看idea的调用堆栈，从下往上查看它的调用过程
+	6、不断的 Step Over，直到运行到 AbstractBeanFactory 抽象类的 sharedInstance = getSingleton(beanName, () -> { 地方时
+	7、当运行到 AbstractBeanFactory 抽象类的 sharedInstance = getSingleton(beanName, () -> { 地方时，点击Step Into,方法变红后点击进入该方法后 不断点击Step Over进行分析

@@ -11,15 +11,14 @@ import java.util.Map;
  */
 public class Hello01 {
 
-	//下面的功能还可以使用xxxAware接口
-	@Autowired //为啥能进来，之前就保存到容器的实例缓存池了；底层组件先在 resolvableDependencies
+	//day20：下面的功能还可以使用xxxAware接口
+	@Autowired //day20：为啥能进来，之前就保存到容器的实例缓存池了；底层组件先在 resolvableDependencies
 	private ApplicationContext applicationContext;
 
-	@Autowired  //BeanFactory实例池里面有
+	@Autowired  //day20：BeanFactory实例池里面有
 	private Environment environment;
 
 	@Autowired  //注入环境变量信息
 	private Map<String,String> systemEnvironment;
-
 
 }

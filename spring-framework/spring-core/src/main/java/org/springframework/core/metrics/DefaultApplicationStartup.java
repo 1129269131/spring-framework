@@ -34,7 +34,7 @@ class DefaultApplicationStartup implements ApplicationStartup {
 		return new DefaultStartupStep();
 	}
 
-	//容器启动过程状态的封装类
+	//day20：容器启动过程状态的封装类
 	static class DefaultStartupStep implements StartupStep {
 
 		boolean recorded = false;

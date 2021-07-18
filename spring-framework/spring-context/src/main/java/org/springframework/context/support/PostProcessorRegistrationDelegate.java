@@ -55,7 +55,7 @@ final class PostProcessorRegistrationDelegate {
 	private PostProcessorRegistrationDelegate() {
 	}
 
-	//执行工厂的后置处理器
+	//day21：执行工厂的后置处理器
 	public static void invokeBeanFactoryPostProcessors(
 			ConfigurableListableBeanFactory beanFactory, List<BeanFactoryPostProcessor> beanFactoryPostProcessors) {
 
@@ -100,7 +100,7 @@ final class PostProcessorRegistrationDelegate {
 
 			// day11：首先：从工厂中获取所有的实现了 PriorityOrdered 接口的 BeanDefinitionRegistryPostProcessor； First, invoke the BeanDefinitionRegistryPostProcessors that implement PriorityOrdered.
 			String[] postProcessorNames =
-					beanFactory.getBeanNamesForType(BeanDefinitionRegistryPostProcessor.class, true, false); //拿到系统中每一个组件的BD信息，进行类型对比，是否匹配指定的类型
+					beanFactory.getBeanNamesForType(BeanDefinitionRegistryPostProcessor.class, true, false); //day21：拿到系统中每一个组件的BD信息，进行类型对比，是否匹配指定的类型
 			for (String ppName : postProcessorNames) {
 				if (beanFactory.isTypeMatch(ppName, PriorityOrdered.class)) {
 					currentRegistryProcessors.add(beanFactory.getBean(ppName, BeanDefinitionRegistryPostProcessor.class));//day11：从工厂中获取这个组件【getBean整个组件创建的流程】并放到这个集合
@@ -279,8 +279,8 @@ final class PostProcessorRegistrationDelegate {
 		sortPostProcessors(internalPostProcessors, beanFactory);
 		registerBeanPostProcessors(beanFactory, internalPostProcessors);
 
-		// 重新注册一下这个后置处理器 Re-register post-processor for detecting inner beans as ApplicationListeners,
-		// 把他放到后置处理器的最后一位； moving it to the end of the processor chain (for picking up proxies etc).
+		// day22：重新注册一下这个后置处理器 Re-register post-processor for detecting inner beans as ApplicationListeners,
+		// day22：把他放到后置处理器的最后一位； moving it to the end of the processor chain (for picking up proxies etc).
 		beanFactory.addBeanPostProcessor(new ApplicationListenerDetector(applicationContext));
 	}
 
@@ -308,7 +308,7 @@ final class PostProcessorRegistrationDelegate {
 		for (BeanDefinitionRegistryPostProcessor postProcessor : postProcessors) {
 			StartupStep postProcessBeanDefRegistry = applicationStartup.start("spring.context.beandef-registry.post-process")
 					.tag("postProcessor", postProcessor::toString);
-			postProcessor.postProcessBeanDefinitionRegistry(registry); //核心，配置类的后置处理器会在此解析配置类
+			postProcessor.postProcessBeanDefinitionRegistry(registry); //day21：核心，配置类的后置处理器会在此解析配置类
 			postProcessBeanDefRegistry.end();
 		}
 	}

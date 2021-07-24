@@ -593,7 +593,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 				logger.trace("Eagerly caching bean '" + beanName +
 						"' to allow for resolving potential circular references");
 			}
-			addSingletonFactory(beanName, () -> getEarlyBeanReference(beanName, mbd, bean)); //三级缓存中的Bean也会被后置处理来增强，
+			addSingletonFactory(beanName, () -> getEarlyBeanReference(beanName, mbd, bean)); //day23：三级缓存中的Bean也会被后置处理来增强，
 		}
 
 		// Initialize the bean instance.
@@ -962,7 +962,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 	 * @return the object to expose as bean reference
 	 */
 	protected Object getEarlyBeanReference(String beanName, RootBeanDefinition mbd, Object bean) {
-		Object exposedObject = bean; //为了让我们从
+		Object exposedObject = bean; //day23：为了让我们从单例工厂池获取到的对象还能经过后置处理器处理
 		if (!mbd.isSynthetic() && hasInstantiationAwareBeanPostProcessors()) {
 			for (SmartInstantiationAwareBeanPostProcessor bp : getBeanPostProcessorCache().smartInstantiationAware) {
 				exposedObject = bp.getEarlyBeanReference(exposedObject, beanName);

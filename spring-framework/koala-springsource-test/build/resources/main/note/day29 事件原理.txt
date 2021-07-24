@@ -1,0 +1,6 @@
+一、AOP运行原理
+	1、给 EventListenerMethodProcessor.java 类的 postProcessBeanFactory()方法和afterSingletonsInstantiated()方法 打上断点
+	2、Step Into 进入该方法
+    3、debug运行 AnnotationMainTest12.java 类
+	4、查看idea的调用堆栈，从下往上查看它的调用过程
+    5、不断的 Step Over，勾勒出 day28-AOP原理.png 所示的过程

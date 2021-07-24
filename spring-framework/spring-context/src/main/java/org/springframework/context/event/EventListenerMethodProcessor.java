@@ -109,7 +109,7 @@ public class EventListenerMethodProcessor
 	@Override
 	public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) {
 		this.beanFactory = beanFactory;
-		//拿到所有的EventListenerFactory，排好㢲
+		//day29：拿到所有的EventListenerFactory，排好序
 		Map<String, EventListenerFactory> beans = beanFactory.getBeansOfType(EventListenerFactory.class, false, false);
 		List<EventListenerFactory> factories = new ArrayList<>(beans.values());
 		AnnotationAwareOrderComparator.sort(factories);
@@ -197,7 +197,7 @@ public class EventListenerMethodProcessor
 						if (factory.supportsMethod(method)) {
 							Method methodToUse = AopUtils.selectInvocableMethod(method, context.getType(beanName));
 							ApplicationListener<?> applicationListener =
-									factory.createApplicationListener(beanName, targetType, methodToUse); //创建监听器
+									factory.createApplicationListener(beanName, targetType, methodToUse); //day29：创建监听器
 							if (applicationListener instanceof ApplicationListenerMethodAdapter) {
 								((ApplicationListenerMethodAdapter) applicationListener).init(context, this.evaluator);
 							}

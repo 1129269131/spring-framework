@@ -255,7 +255,7 @@ final class PostProcessorRegistrationDelegate {
 		//day12：接下来，注册所有的实现了 Ordered 的 BeanPostProcessor  Next, register the BeanPostProcessors that implement Ordered.
 		List<BeanPostProcessor> orderedPostProcessors = new ArrayList<>(orderedPostProcessorNames.size());
 		for (String ppName : orderedPostProcessorNames) {
-			BeanPostProcessor pp = beanFactory.getBean(ppName, BeanPostProcessor.class); //获取后置处理器对象
+			BeanPostProcessor pp = beanFactory.getBean(ppName, BeanPostProcessor.class); //day25：获取后置处理器对象
 			orderedPostProcessors.add(pp);
 			if (pp instanceof MergedBeanDefinitionPostProcessor) {
 				internalPostProcessors.add(pp);

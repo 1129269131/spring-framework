@@ -1,0 +1,10 @@
+一、AOP功能的后置处理器-创建Service代理对象之前的工作（核心类：AbstractAdvisorAutoProxyCreator.java）
+	1、给 AbstractApplicationContext.java 类的 beanFactory.preInstantiateSingletons(); 处打上断点
+	2、Step Into 进入该方法
+	3、给 DefaultListableBeanFactory.java 类的 RootBeanDefinition bd = getMergedLocalBeanDefinition(beanName); 处打上断点
+    4、在断点上右键 --》Condition: 处输入 --》beanName.equals("helloService01") || beanName.equals("logAspect01") 那么只有符合条件的断点才能进来
+    5、给 DefaultListableBeanFactory.java 类的 getBean(beanName); 最底下那个处打上断点
+    6、可以在断点上右键 --》Condition: 处输入 --》beanName.equals("helloService01") || beanName.equals("logAspect01") 那么只有符合条件的断点才能进来
+    7、debug运行 AnnotationMainTest11.java 类
+	8、查看idea的调用堆栈，从下往上查看它的调用过程
+    9、不断的 Step Over，勾勒出 day26-AOP原理.png 所示的过程

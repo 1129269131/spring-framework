@@ -1,0 +1,15 @@
+一、循环依赖（核心类：AbstractBeanFactory.java、DefaultSingletonBeanRegistry.java、AbstractAutowireCapableBeanFactory.java,AutowiredAnnotationBeanPostProcessor.java 的 postProcessProperties(PropertyValues pvs, Object bean, String beanName)）
+	1、给 AbstractApplicationContext.java 抽象类的 finishBeanFactoryInitialization(beanFactory); 方法打上断点
+	2、给 AbstractBeanFactory.java 抽象类的 Object sharedInstance = getSingleton(beanName); 处打上断点
+	3、给 A01.java 类的构造器及 setB(B01 b) 方法打上断点
+	4、给 B01.java 类的构造器及 setA(A01 a) 方法打上断点
+	5、给 DefaultListableBeanFactory.java 类的 RootBeanDefinition bd = getMergedLocalBeanDefinition(beanName); 处打上断点
+    6、可以在断点上右键 --》Condition: 处输入 --》beanName.equals("a01")||beanName.equals("b01") 那么只有符合条件的断点才能进来
+    7、给 DefaultListableBeanFactory.java 类的 getBean(beanName); 处打上断点
+    8、可以在断点上右键 --》Condition: 处输入 --》beanName.equals("a01")||beanName.equals("b01") 那么只有符合条件的断点才能进来
+    9、debug运行 AnnotationMainTest10.java 类
+	10、当debug运行到 DefaultListableBeanFactory.java 类的 getBean(beanName); 方法上时，Step Into 进入该方法
+	11、再Step Into 进入 doGetBean(name, null, null, false); 方法
+	12、查看idea的调用堆栈，从下往上查看它的调用过程
+	13、运行到 DefaultSingletonBeanRegistry.java 类的 singletonObject = this.earlySingletonObjects.get(beanName); 处时，查看 singletonObject 里的循环依赖情况
+    14、不断的 Step Over，勾勒出 day23-循环依赖解决.png 所示的过程

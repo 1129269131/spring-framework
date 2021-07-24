@@ -136,7 +136,7 @@ public class SimpleApplicationEventMulticaster extends AbstractApplicationEventM
 		ResolvableType type = (eventType != null ? eventType : resolveDefaultEventType(event));
 		Executor executor = getTaskExecutor();
 		for (ApplicationListener<?> listener : getApplicationListeners(event, type)) {
-			if (executor != null) {  //使用观察者模式，把所有事件监听器拿来，调用他们的onApplicationEvent方法即可
+			if (executor != null) {  //day29：使用观察者模式，把所有事件监听器拿来，调用他们的onApplicationEvent方法即可
 				executor.execute(() -> invokeListener(listener, event));
 			}
 			else {

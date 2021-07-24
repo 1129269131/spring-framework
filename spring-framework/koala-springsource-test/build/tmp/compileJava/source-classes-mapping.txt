@@ -45,6 +45,16 @@ com/koala/spring/processor/bean/MySmartInstantiationAwareBeanPostProcessor.java
  com.koala.spring.processor.bean.MySmartInstantiationAwareBeanPostProcessor
 com/koala/spring/bean/Cat06.java
  com.koala.spring.bean.Cat06
+com/koala/spring/circle/A01.java
+ com.koala.spring.circle.A01
+com/koala/spring/aop/HelloService01.java
+ com.koala.spring.aop.HelloService01
+com/koala/spring/aop/LogAspect01.java
+ com.koala.spring.aop.LogAspect01
+com/koala/spring/bean/Cat05.java
+ com.koala.spring.bean.Cat05
+com/koala/spring/circle/B01.java
+ com.koala.spring.circle.B01
 com/koala/spring/AnnotationMainTest01.java
  com.koala.spring.AnnotationMainTest01
 com/koala/spring/MainTest03.java
@@ -61,15 +71,29 @@ com/koala/spring/MainTest01.java
  com.koala.spring.MainTest01
 com/koala/spring/AnnotationMainTest02.java
  com.koala.spring.AnnotationMainTest02
-com/koala/spring/bean/Cat05.java
- com.koala.spring.bean.Cat05
 com/koala/spring/AnnotationMainTest10.java
  com.koala.spring.AnnotationMainTest10
 com/koala/spring/AnnotationMainTest09.java
  com.koala.spring.AnnotationMainTest09
+com/koala/spring/AnnotationMainTest06.java
+ com.koala.spring.AnnotationMainTest06
 com/koala/spring/AnnotationMainTest03.java
  com.koala.spring.AnnotationMainTest03
 com/koala/spring/MainTest02.java
  com.koala.spring.MainTest02
-com/koala/spring/AnnotationMainTest06.java
- com.koala.spring.AnnotationMainTest06
+com/koala/spring/AnnotationMainTest11.java
+ com.koala.spring.AnnotationMainTest11
+com/koala/spring/config/AopOpenConfig01.java
+ com.koala.spring.config.AopOpenConfig01
+com/koala/spring/AnnotationMainTest12.java
+ com.koala.spring.AnnotationMainTest12
+com/koala/spring/listener/App01.java
+ com.koala.spring.listener.App01
+com/koala/spring/listener/MessageEvent01.java
+ com.koala.spring.listener.MessageEvent01
+com/koala/spring/listener/AppEventListener01.java
+ com.koala.spring.listener.AppEventListener01
+com/koala/spring/listener/ChangeEvent01.java
+ com.koala.spring.listener.ChangeEvent01
+com/koala/spring/listener/AppEventPublisher01.java
+ com.koala.spring.listener.AppEventPublisher01

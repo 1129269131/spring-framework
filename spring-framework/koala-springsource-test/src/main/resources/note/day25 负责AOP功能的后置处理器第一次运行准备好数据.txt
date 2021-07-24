@@ -1,0 +1,5 @@
+一、负责AOP功能的后置处理器（核心类：BeanFactoryAspectJAdvisorsBuilder.java）
+	1、给 AnnotationAwareAspectJAutoProxyCreator.java 类的所有重写方法打上断点
+    2、debug运行 AnnotationMainTest11.java 类
+	3、查看idea的调用堆栈，从下往上查看它的调用过程
+    4、不断的 Step Over，勾勒出 day25-AOP原理.png 所示的过程

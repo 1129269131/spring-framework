@@ -1,0 +1,7 @@
+一、day27 AOP功能的后置处理器-将增强器组装为拦截器链
+	1、给 AnnotationMainTest11.java 类的 HelloService01 helloService = applicationContext.getBean(HelloService01.class); 处打上断点
+	2、Step Over 进入下一步
+	3、Step Into 进入该方法
+    4、debug运行 AnnotationMainTest11.java 类
+	5、查看idea的调用堆栈，从下往上查看它的调用过程
+    6、不断的 Step Over，勾勒出 day27-AOP原理.png 所示的过程

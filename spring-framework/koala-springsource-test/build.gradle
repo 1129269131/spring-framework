@@ -13,8 +13,8 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 
-    //day01引入spring核心容器
-    compile(project(":spring-context"))
+    compile(project(":spring-context"))//day01：引入spring核心容器
+    compile(project(":spring-aspects"))//day24：引入aop&切面模块
 }
 
 test {

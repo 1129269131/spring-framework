@@ -6,17 +6,16 @@ com/koala/spring/bean/Person02.java
  com.koala.spring.bean.Person02
 com/koala/spring/bean/Cat01.java
  com.koala.spring.bean.Cat01
-com/koala/spring/config/MainConfig02.java
- com.koala.spring.config.MainConfig02
-com/koala/spring/config/MainConfig03.java
- com.koala.spring.config.MainConfig03
- com.koala.spring.config.MainConfig03$MyImportRegistrar
+com/koala/spring/listener/AppEventPublisher01.java
+ com.koala.spring.listener.AppEventPublisher01
+com/koala/spring/listener/MessageEvent01.java
+ com.koala.spring.listener.MessageEvent01
 com/koala/spring/config/MainConfig01.java
  com.koala.spring.config.MainConfig01
 com/koala/spring/processor/factory/MyBeanFactoryPostProcessor.java
  com.koala.spring.processor.factory.MyBeanFactoryPostProcessor
-com/koala/spring/processor/bean/MyBeanPostProcessor.java
- com.koala.spring.processor.bean.MyBeanPostProcessor
+com/koala/spring/AnnotationMainTest03.java
+ com.koala.spring.AnnotationMainTest03
 com/koala/spring/bean/Cat04.java
  com.koala.spring.bean.Cat04
 com/koala/spring/bean/Person03.java
@@ -29,8 +28,8 @@ com/koala/spring/bean/Person04.java
  com.koala.spring.bean.Person04
 com/koala/spring/bean/Person06.java
  com.koala.spring.bean.Person06
-com/koala/spring/processor/bean/MyMergedBeanDefinitionPostProcessor.java
- com.koala.spring.processor.bean.MyMergedBeanDefinitionPostProcessor
+com/koala/spring/config/MainConfig02.java
+ com.koala.spring.config.MainConfig02
 com/koala/spring/bean/Person05.java
  com.koala.spring.bean.Person05
 com/koala/spring/config/MainConfig04.java
@@ -39,10 +38,11 @@ com/koala/spring/bean/Hello01.java
  com.koala.spring.bean.Hello01
 com/koala/spring/bean/HelloFactory01.java
  com.koala.spring.bean.HelloFactory01
-com/koala/spring/processor/bean/MyInstantiationAwareBeanPostProcessor.java
- com.koala.spring.processor.bean.MyInstantiationAwareBeanPostProcessor
-com/koala/spring/processor/bean/MySmartInstantiationAwareBeanPostProcessor.java
- com.koala.spring.processor.bean.MySmartInstantiationAwareBeanPostProcessor
+com/koala/spring/config/MainConfig03.java
+ com.koala.spring.config.MainConfig03
+ com.koala.spring.config.MainConfig03$MyImportRegistrar
+com/koala/spring/AnnotationMainTest02.java
+ com.koala.spring.AnnotationMainTest02
 com/koala/spring/bean/Cat06.java
  com.koala.spring.bean.Cat06
 com/koala/spring/circle/A01.java
@@ -69,16 +69,16 @@ com/koala/spring/AnnotationMainTest05.java
  com.koala.spring.AnnotationMainTest05
 com/koala/spring/MainTest01.java
  com.koala.spring.MainTest01
-com/koala/spring/AnnotationMainTest02.java
- com.koala.spring.AnnotationMainTest02
+com/koala/spring/listener/AppEventListener01.java
+ com.koala.spring.listener.AppEventListener01
 com/koala/spring/AnnotationMainTest10.java
  com.koala.spring.AnnotationMainTest10
 com/koala/spring/AnnotationMainTest09.java
  com.koala.spring.AnnotationMainTest09
 com/koala/spring/AnnotationMainTest06.java
  com.koala.spring.AnnotationMainTest06
-com/koala/spring/AnnotationMainTest03.java
- com.koala.spring.AnnotationMainTest03
+com/koala/spring/listener/ChangeEvent01.java
+ com.koala.spring.listener.ChangeEvent01
 com/koala/spring/MainTest02.java
  com.koala.spring.MainTest02
 com/koala/spring/AnnotationMainTest11.java
@@ -89,11 +89,11 @@ com/koala/spring/AnnotationMainTest12.java
  com.koala.spring.AnnotationMainTest12
 com/koala/spring/listener/App01.java
  com.koala.spring.listener.App01
-com/koala/spring/listener/MessageEvent01.java
- com.koala.spring.listener.MessageEvent01
-com/koala/spring/listener/AppEventListener01.java
- com.koala.spring.listener.AppEventListener01
-com/koala/spring/listener/ChangeEvent01.java
- com.koala.spring.listener.ChangeEvent01
-com/koala/spring/listener/AppEventPublisher01.java
- com.koala.spring.listener.AppEventPublisher01
+com/koala/spring/processor/bean/MyInstantiationAwareBeanPostProcessor.java
+ com.koala.spring.processor.bean.MyInstantiationAwareBeanPostProcessor
+com/koala/spring/processor/bean/MySmartInstantiationAwareBeanPostProcessor.java
+ com.koala.spring.processor.bean.MySmartInstantiationAwareBeanPostProcessor
+com/koala/spring/processor/bean/MyBeanPostProcessor.java
+ com.koala.spring.processor.bean.MyBeanPostProcessor
+com/koala/spring/processor/bean/MyMergedBeanDefinitionPostProcessor.java
+ com.koala.spring.processor.bean.MyMergedBeanDefinitionPostProcessor

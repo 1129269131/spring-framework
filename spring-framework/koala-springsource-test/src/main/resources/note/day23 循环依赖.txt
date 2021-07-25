@@ -11,5 +11,5 @@
 	10、当debug运行到 DefaultListableBeanFactory.java 类的 getBean(beanName); 方法上时，Step Into 进入该方法
 	11、再Step Into 进入 doGetBean(name, null, null, false); 方法
 	12、查看idea的调用堆栈，从下往上查看它的调用过程
-	13、运行到 DefaultSingletonBeanRegistry.java 类的 singletonObject = this.earlySingletonObjects.get(beanName); 处时，查看 singletonObject 里的循环依赖情况
+	13、运行到 DefaultSingletonBeanRegistry.java 类的 singletonObject = this.earlySingletonObjects.get(beanName); //day18：二级缓存 处时，查看 singletonObject 里的循环依赖情况
     14、不断的 Step Over，勾勒出 day23-循环依赖解决.png 所示的过程

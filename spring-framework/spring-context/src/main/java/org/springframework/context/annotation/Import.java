@@ -56,6 +56,7 @@ import java.lang.annotation.Target;
 public @interface Import {
 
 	/**
+	 * day02：
 	 * @Import注解使用的三种方法：
 	 * 		1、直接写Class：
 	 * 			结果：Person01{name='null'}

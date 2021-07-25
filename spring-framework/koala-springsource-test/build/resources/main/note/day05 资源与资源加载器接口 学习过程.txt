@@ -3,7 +3,7 @@
 	2、按 Ctrl+F12 查看接口的所有方法
 	3、按 Ctrl+H 查看它的实现类
 二、
-	1、查看 ResourceLoader 接口
+	1、查看 ResourceLoader.java 接口
 	2、按 Ctrl+F12 查看接口的所有方法
 	3、按 Ctrl+H 查看它的实现类
 	4、类中 右键 --> Diagrams --> Show Diagram... --> 选择 Java Classes --> 打开的类图中右键选择 Show Implementations 查看它的实现子类 --> 选择子类中的 ApplicationContext

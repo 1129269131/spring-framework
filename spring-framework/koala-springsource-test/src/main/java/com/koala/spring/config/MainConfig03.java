@@ -13,7 +13,7 @@ import org.springframework.core.type.AnnotationMetadata;
  * day02：@Import的使用
  * Create by koala on 2021-07-05
  */
-@Import({ MainConfig03.MyImportRegistrar.class })//点击进入 @Import 注解类中，查看注解使用说明
+@Import({ MainConfig03.MyImportRegistrar.class })//day02：点击进入 @Import 注解类中，查看注解使用说明
 @Configuration
 public class MainConfig03 {
 
@@ -26,7 +26,6 @@ public class MainConfig03 {
 	 * 	</bean>
 	 * 	 对应
 	 * 	RootBeanDefinition
-	 *
 	 */
 	static class MyImportRegistrar implements ImportBeanDefinitionRegistrar {
 		@Override

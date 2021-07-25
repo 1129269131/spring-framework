@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Constructor;
 
 /**
- * day11：Bean组件的 PostProcessor；
+ * day12：Bean组件的 PostProcessor；
  * Create by koala on 2021-07-11
  */
 @Component //day13：bean进行代理增强期间进行使用

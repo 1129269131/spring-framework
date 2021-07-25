@@ -6,7 +6,7 @@ import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.stereotype.Component;
 
 /**
- * day11：Bean组件的 PostProcessor；
+ * day12：Bean组件的 PostProcessor；
  * Create by koala on 2021-07-11
  */
 @Component

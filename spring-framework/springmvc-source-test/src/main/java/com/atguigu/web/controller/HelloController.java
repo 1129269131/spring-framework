@@ -17,12 +17,8 @@ import java.util.Map;
 //@Controller; 如果有父子容器 @Component，默认是在父容器中，还找不到
 //@Component+@RequestMapping
 //@RestController
-
-
 @Controller
 public class HelloController {
-
-
 
 	public HelloController(){
 		System.out.println("HelloController.....");
@@ -49,7 +45,7 @@ public class HelloController {
 							 Model model,
 							 Integer i,
 							 RedirectAttributes ra){ //@RequestParam Map<String,Object> params：所有请求参数全封装进来
-		int x =10/i; m++;
+		int x =10/i;
 		if("abc".equals(user)){
 			//非法的用户信息
 			throw new InvalidUserException();
